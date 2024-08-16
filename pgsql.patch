@@ -1,0 +1,79 @@
+
+# Add settings for extensions here
+listen_addresses = '*'
+shared_buffers = 4096MB # 25% of RAM
+temp_buffers = 256MB
+max_files_per_process = 3000
+max_parallel_workers_per_gather = 12
+max_parallel_maintenance_workers = 6 # Количество CPU/4, минимум 2, максимум 6
+commit_delay = 100
+max_wal_size = 1024MB
+min_wal_size = 512MB
+checkpoint_timeout = 15min
+effective_cache_size = 8GB # 75% of RAM 
+from_collapse_limit = 8
+join_collapse_limit = 8
+autovacuum_max_workers = 6 # Количество CPU/2, минимум 2
+vacuum_cost_limit = 200 # 100* autovacuum_max_workers
+autovacuum_naptime = 20s
+autovacuum_vacuum_scale_factor = 0.01
+autovacuum_analyze_scale_factor = 0.005
+max_locks_per_transaction = 256
+escape_string_warning = off
+standard_conforming_strings = off
+shared_preload_libraries = 'online_analyze, plantuner,pg_stat_statements'
+online_analyze.threshold = 50
+online_analyze.scale_factor = 0.1
+online_analyze.enable = on
+online_analyze.verbose = off
+online_analyze.min_interval = 10000
+online_analyze.table_type = 'temporary'
+plantuner.fix_empty_table = on
+max_connections = 700
+shared_buffers = 2048MB # 25% of RAM
+effective_cache_size = 12GB
+work_mem = 128MB
+maintenance_work_mem = 256MB
+max_wal_size = 4GB
+min_wal_size = 2GB
+checkpoint_completion_target = 0.6
+effective_cache_size = 12GB # 75% of RAM
+wal_buffers = -1	#16MB
+default_statistics_target = 3000
+random_page_cost = 0.3
+seq_page_cost = 0.3
+join_collapse_limit=1
+from_collapse_limit = 20
+cpu_operator_cost = 0.00025
+min_parallel_table_scan_size = 216MB
+max_worker_processes = 3
+max_parallel_workers_per_gather = 2
+max_parallel_workers = 2
+
+effective_io_concurrency = 200		# 1-1000; 0 disables prefetching
+track_io_timing=on # measure exact block IO times
+track_functions=pl # track execution times of pl-language procedures if any
+
+wal_level = replica # consider using at least 'replica'
+max_wal_senders = 0
+synchronous_commit = off
+wal_compression = on
+
+bgwriter_delay = 20ms
+bgwriter_lru_maxpages = 400
+bgwriter_lru_multiplier = 4.0
+bgwriter_flush_after = 0
+
+parallel_leader_participation = on
+
+enable_partitionwise_join = on
+enable_partitionwise_aggregate = on
+jit = on
+max_slot_wal_keep_size = '1000 MB'
+track_wal_io_timing = on
+maintenance_io_concurrency = 100
+wal_recycle = on
+
+ssl = off
+row_security = off
+

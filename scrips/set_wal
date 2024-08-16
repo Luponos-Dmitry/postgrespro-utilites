@@ -1,0 +1,2 @@
+#!/bin/bash
+/opt/pgpro/std-16/bin/psql -U postgres -w -h 127.0.0.1 -c "ALTER SYSTEM SET wal_level=minimal;ALTER SYSTEM SET max_wal_senders = 0;"

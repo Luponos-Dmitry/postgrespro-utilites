@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+	<log location="C:\Program Files\1cv8\logs"
+			history="48">
+		<event>
+			<eq property="Name"
+					value="PROC"/>
+		</event>
+		<event>
+			<eq property="Name"
+					value="SCOM"/>
+		</event>
+		<event>
+			<eq property="Name"
+					value="CONN"/>
+		</event>
+		<event>
+			<eq property="Name"
+					value="EXCP"/>
+		</event>
+		<event>
+			<eq property="Name"
+					value="ADMIN"/>
+		</event>
+		<event>
+			<eq property="Name"
+					value="QERR"/>
+		</event>
+		<event>
+			<eq property="Name"
+					value="HASP"/>
+		</event>
+	    <event>
+		  <ne property="Name" value=""/>
+		  <ge property="Durationus" value="20000000"/>
+	    </event>
+	  <event>
+		  <eq property="Name" value="TLOCK"/>
+	  </event>
+	  <event>
+		  <eq property="Name" value="TTIMEOUT"/>
+	  </event>
+	  <event>
+		  <eq property="Name" value="TDEADLOCK"/>
+	  </event>
+		
+		<property name="all"/>
+	</log>
+	<dump location="C:\Users\Admin\AppData\Local\Temp\Dumps\80af5716-b134-4b1c-a38d-4658d1ac4196\"
+			create="1"
+			type="0"
+			externaldump="1"/>
+</config>

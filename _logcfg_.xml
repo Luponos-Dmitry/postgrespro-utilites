@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://v8.1c.ru/v8/tech-log">
+	<dump create="true"
+			location="C:\Users\Admin\AppData\Local\Temp\Dumps\80af5716-b134-4b1c-a38d-4658d1ac4196\"
+			type="0"
+			prntscrn="false"
+			externaldump="1"/>
+	<log location="C:\Program Files\1cv8\logs"
+			history="48">
+		<event>
+			<eq property="name"
+					value="admin"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="conn"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="excp"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="hasp"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="proc"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="qerr"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="scom"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="system"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="tdeadlock"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="tlock"/>
+		</event>
+		<event>
+			<eq property="name"
+					value="ttimeout"/>
+		</event>
+		<property name="all"/>
+	</log>
+</config>
